@@ -398,7 +398,7 @@ p {
   font-weight: 500;
   font-style: 16px;
   line-height: 1.5;
-  letter-spacing: 0, 02em;
+  letter-spacing: 0.02em;
   color: #fff;
 }
 .container-footer-form {
@@ -472,6 +472,7 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
+
   padding: 72px 24px 24px;
   border-radius: 4px;
   background: #fcfcfc;
@@ -491,7 +492,7 @@ p {
   border-radius: 50%;
   padding: 0px;
   line-height: 0;
-  stroke: #111111;
+  fill: #111111;
   border: none;
   border: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
@@ -506,6 +507,7 @@ p {
 .modal-close-btn:focus {
   color: #404bbf;
   border: none;
+  background-color: #404bbf;
 }
 
 /* =========== /Modal window styles =========== */
@@ -522,7 +524,7 @@ p {
 }
 
 .review-form-field-wrapper {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .review-form-field-label {
@@ -600,16 +602,20 @@ p {
   border-color: #4d5ae5;
   outline: transparent;
 }
-.modal-close-btn-icon:hover + .modal-close-btn:hover,
-.modal-close-btn-icon:focus + .modal-close-btn:focus {
+.modal-close-btn-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-btn:hover .modal-close-btn-icon,
+.modal-close-btn:focus .modal-close-btn-icon {
   fill: #fff;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* {
   fill: #111111;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } */
 .review-form-checkbox-wrapper {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .review-form-checkbox-label {
@@ -638,8 +644,10 @@ p {
 .review-form-privacy-checkbox:checked
   + .review-form-checkbox-label
   .review-form-own-checkbox {
-  /* background-color: #fd9222; */
-  fill: #ffffff;
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+
   /* border-color: #fd9222; */
 }
 
